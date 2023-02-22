@@ -40,10 +40,11 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
+function kopyala(tarif){
+  const yeniTarif =[...tarif]
+  return yeniTarif
 }
-
+console.log(kopyala(orijinalTatlar))
 
 /* Görev 2:
 Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları kabul etmelidir:
@@ -154,8 +155,15 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreFiltrele(malzemelerKolisi,filtrelenecek){
+  let yeniDizi = [];
+  for(let i=0 ; i<malzemelerKolisi.length;i++){
+    if(malzemelerKolisi[i].includes(filtrelenecek)){
+      yeniDizi.push(malzemelerKolisi[i]);
+    }
+  }
+  console.log('yeniDizi',yeniDizi);
+  return yeniDizi;
 }
 
 
