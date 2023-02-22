@@ -57,10 +57,16 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
+function dizi25Cesitmi(kartonKoliKutu){
   /*kod buraya*/
+  if(kartonKoliKutu.length=25){
+    return true ;
+  } else {
+    return false;
+  }
+  console.log('25mi?',kartonKoliKutu.length);
 }
-
+dizi25Cesitmi(orijinalTatlar);
 
 /* Görev 3:
 Pastane sahibi size yeni bir lezzet fikriyle geldi: Kakule! Bunun da çok tutacağından çok emin. Bu lezzeti eklemek için diziyi değiştirmeniz gerekir.
@@ -129,10 +135,13 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
+function ismeGoreCesitCikar(tatlar,alerjen){
   /*kod buraya*/
+  const exitIndex = tatlar.indexOf(alerjen);
+  tatlar.splice(exitIndex,1);
+  return tatlar;
 }
-
+ismeGoreCesitCikar(orijinalTatlar,'Tarçın');
 
 /* Görev 7:
 
