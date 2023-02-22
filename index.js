@@ -81,10 +81,12 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
+function cesitEkle(eklenenTat,damakZevki){
+  eklenenTat.unshift(damakZevki);
+  return eklenenTat ;
   /*kod buraya*/
 }
-
+console.log(cesitEkle(orijinalTatlar,'Kakule'))
 
 /* Cörev 4:
 
@@ -99,10 +101,12 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
+function sonCesitiKaldir(kaldir){
+  kaldir.pop();
+  return kaldir;
   /*kod buraya*/
 }
-
+console.log(sonCesitiKaldir(orijinalTatlar))
 
 /* Görev 5:
 Dizideki belirli bir indeksteki çeşniyi döndüren bir işlev yazın.
@@ -115,10 +119,12 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
+function indekstekiCesitiGetir(secenek,sayi1){
+  let cesit = secenek[sayi1];
+  return cesit ;
   /*kod buraya*/
 }
-
+indekstekiCesitiGetir(orijinalTatlar,3);
 
 /* Görev 6:
 
